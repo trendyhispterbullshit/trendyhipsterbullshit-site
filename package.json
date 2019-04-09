@@ -1,0 +1,26 @@
+{
+  "name": "trendyhipsterbullshit-site",
+  "version": "1.0.0",
+  "description": "a website for some trendy hipster bullshit",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trendyhispterbullshit/trendyhipsterbullshit-site.git"
+  },
+  "author": "Nick Wong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trendyhispterbullshit/trendyhipsterbullshit-site/issues"
+  },
+  "homepage": "https://github.com/trendyhispterbullshit/trendyhipsterbullshit-site#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^3.9.1",
+    "gulp-gh-pages": "^0.5.4",
+    "require-dir": "^1.2.0",
+    "run-sequence": "^1.1.5"
+  }
+}
