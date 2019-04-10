@@ -1,3 +1,39 @@
 body {
 	background: #f0bace;
 }
+
+h1 {
+	font-family: 'Futura';
+	color: white;
+	font-weight: bold;
+}
+
+/* ----- Form Stuff ----- */
+input {
+	color: white;
+}
+
+/* label color */
+.input-field label {
+ color: white;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label {
+ color: white !Important;
+}
+/* label focus color */
+.input-field input[type=email]:focus + label {
+ color: white !Important;
+}
+
+/* label underline focus color */
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid white !Important;
+  box-shadow: 0 1px 0 0 white !Important;
+}
+
+/* label underline focus color */
+.input-field input[type=email]:focus {
+  border-bottom: 1px solid white !Important;
+  box-shadow: 0 1px 0 0 white !Important;
+}
