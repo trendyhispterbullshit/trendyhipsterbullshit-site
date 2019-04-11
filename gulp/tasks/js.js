@@ -1,6 +1,6 @@
-// var gulp              = require('gulp'),
-//     paths             = require('../config').paths,
-//     errorHandler      = require('../config').swallowError,
+var gulp              = require('gulp'),
+    paths             = require('../config').paths,
+    errorHandler      = require('../config').swallowError
 //     browserify        = require('browserify'),
 //     babel             = require('babel-core'),
 //     babelify          = require('babelify'),
@@ -10,7 +10,7 @@
 //     source            = require('vinyl-source-stream'),
 //     sourcemaps        = require('gulp-sourcemaps');
 
-// gulp.task('js', function() {
+gulp.task('js', function() {
 //   browserify(paths.src.js + '/app.js', {debug: true})
 //     .transform(babelify)
 //     .bundle().on('error', errorHandler)
@@ -26,7 +26,11 @@
 //     .pipe(gulp.dest(paths.dist.js + '/vendor'))
 //     .on('error', errorHandler);
 
-//     gulp.src(paths.src.js + '/*.json')
-//         .pipe(gulp.dest(paths.dist.js)
-//         .on('error', errorHandler));
-// });
+    // gulp.src(paths.src.js + '/*.json')
+    //     .pipe(gulp.dest(paths.dist.js)
+    //     .on('error', errorHandler));
+
+    gulp.src(paths.src.js + '/*.js')
+        .pipe(gulp.dest(paths.dist.js)
+        .on('error', errorHandler));
+});
