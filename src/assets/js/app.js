@@ -1,14 +1,6 @@
 $(document).ready(function(){
 	$("select").formSelect();
 
-    // if (window.matchMedia("(max-width: 600px)").matches) {
-    //   /* The viewport is at least 400 pixels wide */
-    //   console.log('smol boy')
-    //   $("#rowResponsive").removeClass("valign-wrapper");
-    // } else {
-    //     console.log('big boy')
-    // }
-
 	$("#addSticker").on("click", function() {
 		$("#secondField").css("display", "block");
 		$("#addSticker").addClass("disabled");
