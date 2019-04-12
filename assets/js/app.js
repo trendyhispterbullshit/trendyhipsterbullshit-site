@@ -1,27 +1,27 @@
-// $(document).ready(function(){
-// 	$("select").formSelect();
+$(document).ready(function(){
+	$("select").formSelect();
 
-// 	$("#stickerType").on("change", function() {
-// 		var currentSelect = $('select').formSelect('getSelectedValues');
-
-// 		if (currentSelect.length <= 1) {
-// 			$("#secondField").css("display", "none");
-// 			$("#stickerType").removeAttr("multiple");
-// 		} else {
-// 			$("#secondField").css("display", "block");
-// 			$("#stickerType").attr("multiple");
-// 		}
-		
-// 	})
+	$("#addSticker").on("click", function() {
+		$("#secondField").css("display", "block");
+		$("#addSticker").addClass("disabled");
+	}) 
        
-//     $("form").on("submit", function(){
-//     	event.preventDefault();
-//     	var first_name = $("#first_name").val();
-//     	var last_name = $("#last_name").val();
-//     	var email = $("#email").val();
-//     	var stickerType = $("#stickerType").formSelect('getSelectedValues');
-//     	var quantity = $("#quantity").val();
-//     	var quantity = $("#quantity").val();
-//     	console.log(first_name, last_name, email, stickerType, quantity);
-//     })
-// });
+    $("form").on("submit", function(){
+    	event.preventDefault();
+    	var first_name = $("#first_name").val();
+    	var last_name = $("#last_name").val();
+    	var email = $("#email").val();
+
+    	var stickerType = $("#stickerType").val();
+    	var quantity = $("#quantity").val();
+    	var sticker1 = [stickerType, quantity]
+
+    	var stickerType2 = $("#stickerType2").val();
+    	var quantity2 = $("#quantity2").val();
+    	var sticker2 = [stickerType2, quantity2];
+
+    	var order = [sticker1, sticker2];
+
+    	console.log(first_name, last_name, email, order);
+    })
+});
