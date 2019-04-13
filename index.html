@@ -30,33 +30,34 @@
     <div class="container valign-wrapper">
       <div class="row valign-wrapper resize">
         <div class="col s12 m6 center-align">
-          <img src="assets/images/trendyHypebeastBullshit.png" id="logo">
+          <img src="assets/images/trendyHypebeastBullshit.png" class="logo" id="hypebeastLogo">
+          <img src="assets/images/trendyHipsterBullshit_white_v2.png" class="logo" id="hipsterLogo">
         </div>
         <div class="col s12 m6">
           <div class="row formCont">
             <h1>Order Now!</h1>
 
-            <form class="col s12">
+            <form class="col s12" id="orderForm">
               <div class="row ">
                 <div class="input-field col s6">
-                  <input id="first_name" type="text">
+                  <input id="first_name" name="first_name" type="text" required="" aria-required="true">
                   <label for="first_name">First Name</label>
                 </div>
                 <div class="input-field col s6">
-                  <input id="last_name" type="text">
+                  <input id="last_name" name="last_name" type="text" required="" aria-required="true">
                   <label for="last_name">Last Name</label>
                 </div>
               </div>
               <div class="row">
                 <div class="input-field col s12">
-                  <input id="email" type="email" class="validate">
+                  <input id="email" name="email" type="email" class="validate" required="" aria-required="true">
                   <label for="email">Email</label>
                 </div>
               </div>
 
               <div class="row">
                 <div class="input-field col s12 m8">
-                  <select id="stickerType">
+                  <select id="stickerType" name="sticker_type">
                     <option value="" disabled>Choose your option</option>
                     <option id="hipster" value="hipster">Hipster</option>
                     <option value="HYPEBEAST">HYPEBEAST</option>
@@ -64,9 +65,9 @@
                   <label>Select Sticker Type</label>
                 </div>
                 <div class="input-field col s12 m4">
-                  <select id="quantity">
-                    <option value="" disabled selected>-</option>
-                    <option value="1">1</option>
+                  <select id="quantity" name="quantity" required="" aria-required="true">
+                    <option value="" disabled>-</option>
+                    <option value="1" selected>1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
@@ -84,17 +85,17 @@
 
               <div class="row" id="secondField">
                 <div class="input-field col s12 m8">
-                  <select id="stickerType2">
-                    <option value="" disabled>Choose your option</option>
+                  <select id="stickerType2" name="sticker_type2">
+                    <option value="" disabled selected>Choose your option</option>
                     <option id="hipster" value="hipster">Hipster</option>
                     <option value="HYPEBEAST">HYPEBEAST</option>
                   </select>
                   <label>Select Second Sticker</label>
                 </div>
                 <div class="input-field col s12 m4">
-                  <select id="quantity2">
-                    <option value="" disabled selected>-</option>
-                    <option value="1">1</option>
+                  <select id="quantity2" name="quantity2">
+                    <option value="" disabled>-</option>
+                    <option value="1" selected>1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
@@ -113,7 +114,7 @@
 
               <div class="row">
                 <a class="waves-effect waves-light btn pink lighten-3" id="addSticker"><i class="material-icons right">add</i>Add Sticker</a>
-                <button class="btn waves-effect waves-light pink lighten-3" type="submit" name="action">Submit
+                <button class="btn waves-effect waves-light pink lighten-3" type="submit" name="action" id="submitButton">Submit
                   <i class="material-icons right">send</i>
                 </button>
               </div>
@@ -132,6 +133,8 @@
       src="https://code.jquery.com/jquery-3.3.1.min.js"
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
       crossorigin="anonymous"></script>
+
+    <script src="assets/js/jquery.serialize-object.min.js"></script>
 
   <!-- Compiled and minified MATERIALIZE JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

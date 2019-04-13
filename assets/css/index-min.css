@@ -9,10 +9,14 @@ body {
 
 /* left 6 col logo side styles */
 
-#logo {
+.logo {
 	width: 75%; 
 	height: 75%; 
 	display: inline-block;
+}
+
+#hipsterLogo {
+	display: none;
 }
 
 /* right 6 col form */
