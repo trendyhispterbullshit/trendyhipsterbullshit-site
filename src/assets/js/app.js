@@ -6,6 +6,7 @@ $(document).ready(function(){
     var yyyy = today.getFullYear();
     today = mm + '/' + dd + '/' + yyyy;
 
+  $('.tooltipped').tooltip();
 	$("select").formSelect();
     var $form = $("form#orderForm")
     var url = 'https://script.google.com/macros/s/AKfycbzlff4kD5HUprkvuAJJ8QqZzRMvfrAfJoWYd4DRSjoHQxrR1Ak/exec'
@@ -41,6 +42,7 @@ $(document).ready(function(){
           data: stuff,
           success: function() {
               console.log('form submit success')
+              M.toast({html: 'You will receive an email from nick@nickwong.io confirming order.'})
               $("#submitButton").removeClass("pink");
               $("#submitButton").removeClass("lighten-3");
               $("#submitButton").text("Order Placed");
