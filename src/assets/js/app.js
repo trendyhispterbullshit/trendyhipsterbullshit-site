@@ -32,6 +32,8 @@ $(document).ready(function(){
 
         var stuff = $form.serializeObject();
         stuff.date = today;
+        var shipping_costs = 0.35;
+        stuff.shipping_costs = shipping_costs;
 
 
         console.log("let's post to sheets")
