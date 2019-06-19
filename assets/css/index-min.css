@@ -15,9 +15,16 @@ body {
 	display: inline-block;
 }
 
+#hypebeastLogo {
+	display: none;
+}
+
 #hipsterLogo {
 	display: none;
 }
+/*#hipsterLogoWhite {
+	display: none;
+}*/
 
 /* right 6 col form */
 .formCont {
@@ -45,6 +52,25 @@ h1 {
 #addSticker {
 	margin-right: 20px;
 }
+
+#helperIcons li {
+	width: 10px;
+	height: 10px;
+	background: #fff;
+	border-radius: 100%;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+#helperIcons ul {
+	margin-top: 40px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+
+
 
 /* default state for second form is hidden */
 #secondField {
@@ -104,4 +130,5 @@ input {
 	.resize {
 		display: flex !Important;
 	}
+
 }
