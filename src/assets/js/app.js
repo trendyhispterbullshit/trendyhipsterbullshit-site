@@ -16,15 +16,28 @@ $(document).ready(function(){
 		$("#addSticker").addClass("disabled");
 	}) 
 
-    // reliant on two stickers
-    $(".logo").on('click', function() {
-        if ($("#hipsterLogo").css("display") == 'none') {
-            $("#hipsterLogo").css("display", "inline-block");
-            $("#hypebeastLogo").css("display", "none"); 
-        } else if ($("#hipsterLogo").css("display") == 'inline-block') {
-            $("#hipsterLogo").css("display", "none");
-            $("#hypebeastLogo").css("display", "inline-block");
-        }
+  var counter = 0;
+  console.log(counter)
+
+    $(".resize").on('click', function() {
+      counter++;
+      console.log(counter)
+      if (counter % 3 == 0) {
+        $("#hipsterLogoWhite").css("display", "inline-block"); 
+        $("#hipsterLogo").css("display", "none");
+        $("#hypebeastLogo").css("display", "none"); 
+      } else if (counter % 3 == 1) {
+        // starts here
+        $("#hipsterLogoWhite").css("display", "none"); 
+        $("#hipsterLogo").css("display", "inline-block");
+        $("#hypebeastLogo").css("display", "none"); 
+
+      } else if (counter % 3 == 2) {
+        $("#hipsterLogoWhite").css("display", "none"); 
+        $("#hipsterLogo").css("display", "none");
+        $("#hypebeastLogo").css("display", "inline-block"); 
+      }
+
     })
 
     $("form").on("submit", function(){
