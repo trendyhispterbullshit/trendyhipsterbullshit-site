@@ -19,7 +19,7 @@ $(document).ready(function(){
   var counter = 0;
   console.log(counter)
 
-    $(".resize").on('click', function() {
+    $("#gallery").on('click', function() {
       counter++;
       console.log(counter)
       if (counter % 3 == 0) {
