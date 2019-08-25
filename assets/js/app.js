@@ -22,20 +22,28 @@ $(document).ready(function(){
     $("#gallery").on('click', function() {
       counter++;
       console.log(counter)
-      if (counter % 3 == 0) {
+      if (counter % 4 == 0) {
         $("#hipsterLogoWhite").css("display", "inline-block"); 
         $("#hipsterLogo").css("display", "none");
         $("#hypebeastLogo").css("display", "none"); 
-      } else if (counter % 3 == 1) {
-        // starts here
+        $("#berkeleyLogo").css("display", "none"); 
+        $("body").css("background", "#f0bace");
+      } else if (counter % 4 == 1) {
         $("#hipsterLogoWhite").css("display", "none"); 
         $("#hipsterLogo").css("display", "inline-block");
         $("#hypebeastLogo").css("display", "none"); 
-
-      } else if (counter % 3 == 2) {
+        $("#berkeleyLogo").css("display", "none"); 
+      } else if (counter % 4 == 2) {
         $("#hipsterLogoWhite").css("display", "none"); 
         $("#hipsterLogo").css("display", "none");
         $("#hypebeastLogo").css("display", "inline-block"); 
+        $("#berkeleyLogo").css("display", "none"); 
+      } else if (counter % 4 == 3) {
+        $("#hipsterLogoWhite").css("display", "none"); 
+        $("#hipsterLogo").css("display", "none");
+        $("#hypebeastLogo").css("display", "none"); 
+        $("#berkeleyLogo").css("display", "inline-block");
+        $("body").css("background", "#75A3EA"); 
       }
 
     })
